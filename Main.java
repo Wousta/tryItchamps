@@ -338,7 +338,7 @@ public class Main{
             this.writer = new PrintWriter(writer);
         }
 
-        public void print(char[] array) {
+        public void printCharArray(char[] array) {
             writer.print(array);
         }
 
@@ -441,7 +441,7 @@ public class Main{
             writer.println();
         }
 
-        public void println(char[] array) {
+        public void printLn(char[] array) {
             print(array);
             writer.println();
         }
