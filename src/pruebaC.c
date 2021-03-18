@@ -4,20 +4,27 @@
 //prueba de C
 
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
-
-
-int sumIs(int a, int b) {
-    return a + b ;
-}
 
 int main() {
-    int num1,num2;
-    scanf("%d %d",&num1,&num2);
-    int sum;
-    sum = sumIs(num1,num2);
-    printf("%d",sum);
+    int h,w, area;
+    int in = 0;
+    scanf("%d %d",&h,&w);
+    char pos;
+    char poly[h][w];
+    for(int i = 0; i < h; i++){
+        for(int j = 0; i < w; j++){
+            scanf("%c",&pos);
+            if(!in && pos != '.'){
+                in = 1;
+                area += 1;
+            }
+            else if(in && pos != '.'){
+                in = 0;
+                area += 1;
+            }
+            else { area += 2;}
+        }
+    }
+    printf("%d",area);
     return 0;
 }
